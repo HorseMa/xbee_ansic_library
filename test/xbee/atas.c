@@ -97,9 +97,9 @@ int main( int argc, char *argv[])
 {
    char cmdstr[80];
 	int status;
-	xbee_serial_t XBEE_SERPORT = { 115200, 0 };
+	xbee_serial_t XBEE_SERPORT = { 115200, 0 ,"/dev/ttyO1"};
 
-	parse_serial_arguments( argc, argv, &XBEE_SERPORT);
+	//parse_serial_arguments( argc, argv, &XBEE_SERPORT);
 
 	// initialize the serial and device layer for this XBee device
 	if (xbee_dev_init( &my_xbee, &XBEE_SERPORT, NULL, NULL))
